@@ -1,20 +1,19 @@
 require 'rubygems'
 require 'sinatra'
-
-layout 'site.erb'
+require 'haml'
 
 get '/' do
-  erb :index, :layout => 'site.erb'
+  haml :index
 end
 
 get '/about' do
-  erb :about
+  haml :about
 end
 
 get '/projects' do
-  erb :projects
+  haml :projects
 end
 
 get '/contact' do
-  erb :contact
+  haml :contact
 end
