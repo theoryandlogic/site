@@ -1,7 +1,10 @@
+require 'rubygems'
 require 'sinatra'
 
+layout 'site.erb'
+
 get '/' do
-  erb :index
+  erb :index, :layout => 'site.erb'
 end
 
 get '/about' do
