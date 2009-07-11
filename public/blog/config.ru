@@ -4,7 +4,7 @@ require 'main'
 
 root_dir = File.dirname(__FILE__)
 
-set :environment, :development
+set :environment,  :production
 set :root, root_dir
 set :app_file, File.join(root_dir, 'main.rb')
 disable :run
@@ -14,12 +14,5 @@ log = File.new('log/app.log', 'a')
 $stdout.reopen(log)
 $stderr.reopen(log)
 
-
-map '/' do 
-  run Theory::Site
-end
-
-map '/blog' do
-  run Theory::Blog
-end
+run Sinatra::Application
 

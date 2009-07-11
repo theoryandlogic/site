@@ -1,0 +1,197 @@
+.container {
+	width: 600px;
+  margin: 0 auto;
+}
+
+#flourish {
+	width: 300px;
+	margin: 40px auto 0 auto;
+}
+
+#logo {
+	width: 600px;
+	display: block;
+	margin: 40px auto;
+}
+
+#logo a {
+	color: transparent;
+	background-color:transparent;
+}
+
+#container {
+	margin: 0 4px;
+	padding-bottom: 50px;
+}
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+* {margin:0;padding:0;} 
+
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html {
+	overflow-y:no-scroll;
+}
+html, body, #wrap {height: 100%;}
+
+body > #wrap {height: auto; min-height: 100%;}
+
+#container {padding-bottom: 100px;width: 600px;
+margin: 0 auto;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -100px; /* negative value of footer height */
+	height: 100px;
+	clear:both;
+	background-color: #333;
+}
+
+/* CLEAR FIX*/
+.clearfix:after {content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+#bg {
+	height: 15px;
+	background-color: #333;
+/*	border-top: 15px solid #000;
+*/}
+
+img {
+	border: none;
+}
+
+li a.active, li a.active:hover {
+	color: #fff;
+	background-color: #333;
+}
+
+/*li.active a:link, ul#nav li.active a:hover, ul#nav li.active a:visited,{
+	color: #fff;
+	background-color: #000;
+	
+}*/
+
+
+ul#nav {
+	width: 600px;
+	text-align: center;
+	margin:20px auto;
+/*	border-bottom: 2px solid #333;
+*/}
+
+ul.work_nav 
+{
+	text-align: center;
+	margin:0;
+}
+
+ul.work_nav li {
+	display:inline-block;
+	margin: 0 5px;
+}
+
+ul.work_nav li a {
+	font-size: 2em;
+	padding:  .2em .5em;
+}
+
+
+
+a {
+	background-color: #eee;
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	background-color: #1B97F2;
+}
+
+a:focus {
+	color: #fff;
+	background-color: #333;
+}
+
+
+ul#nav li {
+	color: #fff;
+	display: inline-block;
+/*	width: 100px;
+*/	text-align: center;
+	margin:0 5px;
+/*	font-weight: bold;
+*/	/*font-family: 'Helvetica', 'Geneva', sans-serif;*/
+}
+
+ul#nav li a {
+	padding: .2em .5em;
+	
+	display: block;
+	font-size: 1.2em;
+	text-decoration: none;
+/*	border-top: 1px solid #333;
+*/
+	
+	
+}
+
+ul#nav li a.inactive {
+	color: #333;
+	background-color: #eee;
+}
+
+/*ul#nav li a:hover, ul#nav li a:focus {
+	color: #fff;
+	background-color: #1B97F2;
+	
+}*/
+
+ul#nav li a:hover, ul#nav li a:focus {
+	color: #fff;
+	background-color: #1B97F2;
+	text-decoration: none;
+}
+
+.portfolio-images {
+	margin: 20px auto;
+}
+
+.portfolio {
+	width: 260px;
+	height: 110px;
+	border:10px solid #eee;
+	margin:0 8px;
+	
+	display:inline-block;
+}
+
+#form_portfolio, #function_portfolio {
+	width:600px;
+	margin: 0 auto;
+}
+
+#contact_form {
+	width: 350px;
+	margin: 0 auto;
+}
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}

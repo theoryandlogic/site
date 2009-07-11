@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='en' http-equiv='Content-Language' />
+		<%= stylesheet 'main' %>
+		<%= stylesheet 'reset' %>
+		
+		<title>theory&amp;logic</title>
+	</head>
+	<body>
+		
+		<div id="bg">
+		</div>
+		<div id="wrap">
+
+				<div id="container" class="clearfix">
+					<div id="header">
+						<div id="logo">
+							<a href="/"><img src="/images/logo.png" /></a>
+						</div>
+							<ul id="nav">
+								<li><a href="/"  class="<%= is_active?('/') %>">HOME</a></li>
+								
+								<li><a href="/about"  class="<%= is_active?('/about') %>">ABOUT</a></li>
+								<li><a href="/work" class="<%= is_active?('/work') %>">WORK</a></li>
+								<li><a href="/blog" class="<%= is_active?('/blog/') %>">BLOG</a></li>
+								<li><a href="/contact" class="<%= is_active?('/contact') %>">CONTACT</a></li>
+							</ul>
+
+					</div>
+					<hr />
+					
+					<div id="flashes">
+						<% @flash.each do |key, value| %>
+							<div class="<%= key %>"><%= value %></div>
+						<% end if @flash.class == Hash %>
+					</div>
+					
+					<div id="main">
+						<%= yield %>
+						<div id="flourish">
+						<img src="/images/tinyflourish.png" />
+					</div>
+					</div>
+					</div>
+
+				</div>
+
+		</div>
+		<div id="footer">
+
+		</div>
+
+		<!-- Google Analytics -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-8670854-2");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+		<%= javascript 'jquery.tools.min'%>
+		<%= javascript 'main' %>
+		
+	</body>
+</html>
